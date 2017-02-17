@@ -1,24 +1,17 @@
 {% block content %}
     {% for pizza in pizza_list %}
-        <div class="item  col-xs-4 col-lg-4 grid-group-item list-group-item">
-            <div class="thumbnail">
-                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt=""/>
-                <div class="caption">
+
+        <div class="item  col-xs-4 col-lg-4  col-md-8 grid-group-item list-group-item">
+                <img class="group list-group-image" src="http://www.cbc.ca/inthekitchen/assets_c/2012/11/MargheritaPizza21-thumb-596x350-247022.jpg" alt=""/>
+                <div class="caption col-xs-12 col-md-6">
                     <h4 class="group inner list-group-item-heading">
                         {{ pizza.Name }}</h4>
                     <p class="group inner list-group-item-text">
                         {{ pizza.Description }}</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <p class="lead">
-                                {{ pizza.Price }}</p>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
-                        </div>
-                    </div>
+                    <p class="lead" class="col-xs-6 col-md-6"> {{ pizza.Price }}</p>
+                    <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
                 </div>
-            </div>
         </div>
+
     {% endfor %}
 {% endblock %}
