@@ -12,5 +12,6 @@ import hello.views
 urlpatterns = [
     url(r'^$', hello.views.index, name='index'),
     url(r'^products', hello.views.products, name='products'),
+    url(r'^init', hello.views.initialize_database, name='initialize_database'),
     url(r'^admin/', include(admin.site.urls)),
 ]
