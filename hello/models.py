@@ -7,3 +7,13 @@ class Product(models.Model):
     price       = models.IntegerField()
     currency    = models.CharField(max_length=32)
     picture     = models.CharField(max_length=32)
+
+class Order(models.Model):
+    cst_name        = models.CharField(max_length=32)
+    cst_surname     = models.CharField(max_length=32)
+    cst_phone       = models.CharField(max_length=32)
+    cst_email       = models.CharField(max_length=32)
+    cst_city        = models.CharField(max_length=32)
+    cst_street      = models.CharField(max_length=32)
+    cst_postal_code = models.CharField(max_length=32)
+    productID       = models.CharField(max_length=32)

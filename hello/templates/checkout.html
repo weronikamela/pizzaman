@@ -10,12 +10,8 @@
     <link rel="stylesheet" href="../../static/css/bootstrap-theme.min.css"/>
 </head>
 <body>
-<ul id="#navbar">
-    <li><a class="active" href="">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">About</a></li>
-</ul>
+{% include 'nav.html' %}
+{{instance.name}}
 <div class="bodyBackground"></div>
 <div class="container-fluid myView">
     <div class="container">
