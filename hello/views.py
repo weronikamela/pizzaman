@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 
 from .models import Product
@@ -8,9 +8,20 @@ from .models import Product
 def index(request):
     return render(request, 'index.html', {'pizza_list': Product.objects.all()})
 
-
 def products(request):
     return render(request, 'products.html')
+
+#def checkout(request):
+#    return render(request, 'checkout.html')
+
+def checkout(request, id):
+    instance = get_object_or_404(Product, id=id)
+    Context = {
+        "name": instance.name,
+        "instance": instance
+    }
+    return render(request, 'checkout.html', Context)
+
 
 def initialize_database(request):
     Product.objects.all().delete()

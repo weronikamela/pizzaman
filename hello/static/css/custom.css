@@ -33,8 +33,7 @@
 
     .bodyBackground {
       content: "";
-      background-color: #D50A0A ;
-      opacity: 0.9;
+      background-color: #D50A0A;
       top: 0;
       left: 0;
       bottom: 0;
@@ -120,7 +119,7 @@
        border: none;
     }
 
-    #menuSite #navbar {
+    nav #navbar {
         margin-bottom: 0px;
     }
 
@@ -131,28 +130,33 @@
 /*CHECKOUT FORM*/
     #checkout{
         background-color: #333;
-        margin-left: auto;
-        margin-right: auto;
+        width: 290px;
+        margin: 0 auto;
         box-sizing: border-box;
         border-radius: 15px;
-        padding: 5px;
-    }
-    #checkout input{
-        width: 250px;
-        height: 35px;
-        margin: 10px auto 0 auto;
-        border: 0;
-        border-radius: 5px;
         padding: 10px;
-        display: block;
     }
-    #checkout-button{
+    .input-button-medium{
         width: 250px;
         height: 35px;
         margin: 10px auto 10px auto;
         border: 0;
         border-radius: 5px;
         display: block;
+        font-weight: bold;
+    }
+    #checkout input{
+        padding: 10px;
+        border: 0;
+    }
+    #checkout button.input-button-medium{
+        background-color: #eee;
+        color: #555;
+        transition: .5s all;
+    }
+    #checkout button.input-button-medium:onclick{
+        background-color: #555;
+        color: #eee;
     }
     #infotable{
         background-color: white;
