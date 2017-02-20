@@ -5,3 +5,5 @@ staticfiles
 db.sqlite3
 /python-getting-started.iml
 /.idea/
+/db.sqlite3
+/hello/migrations/
