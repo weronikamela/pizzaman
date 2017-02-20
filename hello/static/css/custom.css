@@ -33,8 +33,7 @@
 
     .bodyBackground {
       content: "";
-      background: url(http://www.halopizza-luban.pl/wp-content/uploads/2016/02/pizza-1.jpg);
-      opacity: 0.3;
+      background-color: #D50A0A;
       top: 0;
       left: 0;
       bottom: 0;
@@ -44,15 +43,12 @@
     }
 
     .myView{
-        margin: 50px;
-    }
+      background-color: #D50A0A ;
+      padding-top: 50px;
+      }
 
     .borderRight{
         border-right: solid 1px #000;
-    }
-
-    .marginRight{
-        margin-right: 40px;
     }
 
     .whiteBackground{
@@ -63,6 +59,7 @@
 /*MENU*/
     .menu{
         width:55%!important;
+        margin-right: 40px;
     }
 
     .cart{
@@ -70,39 +67,34 @@
     }
 
     .glyphicon { margin-right:5px; }
-    .thumbnail
-    {
-        margin-bottom: 20px;
-        padding: 0px;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        border-radius: 0px;
-    }
 
     .item.list-group-item
     {
         float: none;
         width: 100%;
         background-color: #fff;
-        margin-bottom: 10px;
-    }
-    .item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
-    {
-        background: #428bca;
     }
 
-    .item.list-group-item .list-group-image
+    .list-group-image
     {
         margin-right: 10px;
+        max-width: 275px;
+        max-height: 250px;
     }
+     .item.list-group-item{
+        margin-right: 10px;
+     }
+
     .item.list-group-item .thumbnail
     {
         margin-bottom: 0px;
     }
+
     .item.list-group-item .caption
     {
         padding: 9px 9px 0px 9px;
     }
+
     .item.list-group-item:nth-of-type(odd)
     {
         background: #eeeeee;
@@ -111,7 +103,7 @@
     .item.list-group-item:before, .item.list-group-item:after
     {
         display: table;
-        content: " ";
+        content: "";
     }
 
     .item.list-group-item img
@@ -122,3 +114,59 @@
     {
         clear: both;
     }
+
+    #menuSite .list-group-item  {
+       border: none;
+    }
+
+    nav #navbar {
+        margin-bottom: 0px;
+    }
+
+    .lead{
+        margin-bottom: 0px!improtant;
+    }
+
+/*CHECKOUT FORM*/
+    #checkout{
+        background-color: #333;
+        width: 290px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        border-radius: 15px;
+        padding: 10px;
+    }
+    .input-button-medium{
+        width: 250px;
+        height: 35px;
+        margin: 10px auto 10px auto;
+        border: 0;
+        border-radius: 5px;
+        display: block;
+        font-weight: bold;
+    }
+    #checkout input{
+        padding: 10px;
+        border: 0;
+    }
+    #checkout button.input-button-medium{
+        background-color: #eee;
+        color: #555;
+        transition: .5s all;
+    }
+    #checkout button.input-button-medium:onclick{
+        background-color: #555;
+        color: #eee;
+    }
+    #infotable{
+        background-color: white;
+        text-align: right;
+        border-radius: 5px;
+        border:  white;
+    }
+    #infotable thead tr th{
+        width: 100px;
+        text-align: right;
+    }
+
+
