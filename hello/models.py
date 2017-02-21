@@ -1,26 +1,13 @@
 from django.db import models
 
 # Create your models here.
-class Product(models.Model):
-    name        = models.CharField(max_length=32)
-    description = models.CharField(max_length=255)
-    price       = models.IntegerField()
-    currency    = models.CharField(max_length=32)
-    picture     = models.CharField(max_length=255)
-
-class Order(models.Model):
-    cst_name        = models.CharField(max_length=32)
-    cst_surname     = models.CharField(max_length=32)
-    cst_phone       = models.CharField(max_length=32)
-    cst_email       = models.CharField(max_length=32)
-    cst_city        = models.CharField(max_length=32)
-    cst_street      = models.CharField(max_length=32)
-    cst_postal_code = models.CharField(max_length=32)
-    productID       = models.CharField(max_length=32)
-
 class Product2(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=255)
+    displayurl = models.CharField(max_length=1000)
+    price = models.IntegerField(max_length=18)
+    currency = models.CharField(max_length=5)
+    description = models.CharField(max_length=255)
     class Meta:
         managed = False
         db_table = '"salesforce"."product2"'
