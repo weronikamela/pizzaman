@@ -14,6 +14,6 @@ urlpatterns = [
     url(r'^products', hello.views.products, name='products'),
     #url(r'^checkout', hello.views.checkout, name='checkout'),
     url(r'^checkout/(?P<id>\d+)/$', hello.views.checkout, name='checkout'),
-    url(r'^init', hello.views.initialize_database, name='initialize_database'),
+    #url(r'^init', hello.views.initialize_database, name='initialize_database'),
     url(r'^admin/', include(admin.site.urls)),
 ]

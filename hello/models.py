@@ -17,3 +17,10 @@ class Order(models.Model):
     cst_street      = models.CharField(max_length=32)
     cst_postal_code = models.CharField(max_length=32)
     productID       = models.CharField(max_length=32)
+
+class Product2(models.Model):
+    id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=255)
+    class Meta:
+        managed = False
+        db_table = 'product2'
