@@ -23,4 +23,4 @@ class Product2(models.Model):
     name = models.CharField(max_length=255)
     class Meta:
         managed = False
-        db_table = 'product2'
+        db_table = 'salesforce.product2'
