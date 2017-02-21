@@ -1,7 +1,7 @@
 {% block content %}
     {% for pizza in pizza_list %}
         <div class="item  col-xs-4 col-lg-4 grid-group-item list-group-item">
-            <img class="group list-group-image" src="{{ pizza.displayurl }}" alt=""/>
+            <img class="group list-group-image" src="{{ pizza.url }}" alt=""/>
             <div class="caption">
                 <h4 class="group inner list-group-item-heading">
                     {{ pizza.name }}</h4>
@@ -9,7 +9,7 @@
                     {{ pizza.description }}</p>
                 <div class="col-xs-12 col-md-6">
                     <p class="lead">
-                        {{ pizza.price__c }} {{ pizza.currency__c }}</p>
+                        {{ pizza.price }} {{ pizza.currency }}</p>
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <a class="btn btn-success" href="/checkout/{{ pizza.id }}/">Add to cart</a>

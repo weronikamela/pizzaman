@@ -11,11 +11,8 @@ def index(request):
 def products(request):
     return render(request, 'products.html')
 
-#def checkout(request):
-#    return render(request, 'checkout.html')
-
 def checkout(request, id):
-    instance = get_object_or_404(Product, id=id)
+    instance = get_object_or_404(Product2, id=id)
     Context = {
         "name": instance.name,
         "instance": instance
