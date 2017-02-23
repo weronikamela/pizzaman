@@ -8,19 +8,20 @@ class Product2(models.Model):
     price        = models.DecimalField(max_digits=18, decimal_places=2, db_column='price__c')
     currency     = models.CharField(max_length=5, db_column='currency__c')
     description  = models.CharField(max_length=255, db_column='description__c')
+    sfid = models.CharField(max_length=18, db_column='sfid')
     class Meta:
         managed = False
         db_table = '"salesforce"."product2"'
 
 class Order(models.Model):
-    id          = models.IntegerField(primary_key=True)
+    # id          = models.IntegerField(primary_key=True)
     name        = models.CharField(max_length=32, db_column='cst_name__c')
     surname     = models.CharField(max_length=32, db_column='cst_surname__c')
     street      = models.CharField(max_length=32, db_column='cst_street__c')
     postalcode  = models.CharField(max_length=32, db_column='cst_postal_code__c')
     city        = models.CharField(max_length=32, db_column='cst_city__c')
     email       = models.CharField(max_length=32, db_column='cst_email__c')
-    productid   = models.OneToOneField(Product2, db_column='productID__c')
+    product   = models.OneToOneField(Product2, db_column='productid__c')
     class Meta:
         managed = False
         db_table = '"salesforce"."order__c"'

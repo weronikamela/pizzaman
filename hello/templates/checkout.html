@@ -8,22 +8,29 @@
     <link rel="stylesheet" href="../../static/css/custom.css"/>
     <link rel="stylesheet" href="../../static/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../../static/css/bootstrap-theme.min.css"/>
+
+    <script type="text/javascript">
+        var csrftoken = jquery("[name=csrfmiddlewaretoken]").val();
+    </script>
 </head>
 <body>
 {% include 'nav.html' %}
-{{instance.salesforceid}}
+{{instance.id}}
 <div class="bodyBackground"></div>
 <div class="container-fluid myView">
     <div class="container">
-        <form id="checkout" method="post">
-            <input type="text" class="input-button-medium" id="name" name="name" placeholder="Name" required="required"/>
-            <input type="text" class="input-button-medium" id="surname" name="surname" placeholder="Surname" required="required"/>
-            <input type="text" class="input-button-medium" id="phone" name="phone" placeholder="Phone" required="required"/>
-            <input type="text" class="input-button-medium" id="email" name="email" placeholder="E-mail"/>
-            <input type="text" class="input-button-medium" id="city" name="city" placeholder="City" required="required"/>
-            <input type="text" class="input-button-medium" id="street" name="street" placeholder="Street" required="required"/>
-            <input type="text" class="input-button-medium" id="postal-code" name="postal-code" placeholder="Postal Code" required="required"/>
-            <button id="checkout-button" class="input-button-medium" >Checkout</button>
+        <form  id="checkout" action="/checkout" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <!--<input class="input-button-medium" id="customerName" type="text" name="customerName" placeholder="Name" maxlength="32" required="required">-->
+            <!--<input class="input-button-medium" id="customerSurname"  type="text" name="customerSurname" placeholder="Surname" required="required"/>-->
+            <!--<input class="input-button-medium" id="customerPhone" type="text"  name="customerPhone" placeholder="Phone" required="required"/>-->
+            <!--<input class="input-button-medium" id="customerEmail" type="text" name="customerEmail" placeholder="E-mail"/>-->
+            <!--<input class="input-button-medium" id="customerCity" name="customerCity" type="text" placeholder="City" required="required"/>-->
+            <!--<input class="input-button-medium" id="customerStreet" name="customerStreet" type="text" placeholder="Street" required="required"/>-->
+            <!--<input class="input-button-medium" id="customerPostalCode" name="customerPostalCode" type="text" placeholder="Postal Code" required="required"/>-->
+            <!--<input class="input-button-medium" style="display:none" id="productId" name="productId" type="text" required="required" value = id/>-->
+            <button type="submit" id="checkout-button" class="input-button-medium">Place Order</button>
         </form>
     </div>
     <script src="../../static/js/jquery-3.1.1.min.js" type="text/javascript"></script>
