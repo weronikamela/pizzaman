@@ -58,6 +58,9 @@
         background-color: white;
 
     }
+    body{
+        background-color: #D50A0A;
+    }
 
 /*MENU*/
     .menu{
@@ -194,8 +197,7 @@
     .product .product-info{
         background-color: #333;
         float: left;
-        min-width: 400px;
-        max-width: 600px;
+        width: 600px;
         height: inherit;
         box-sizing: border-box;
         padding-left: 10px;
@@ -220,3 +222,18 @@
         border-bottom-right-radius: inherit;
     }
 
+/*FOOTER*/
+    footer{
+        display: flex;
+        justify-content: center;
+    }
+
+    footer div{
+        display: flex;
+        justify-content: center;
+        background-color:#333333;
+        padding-top: 8px;
+        padding-bottom: 12px;
+        margin-top: 20px;
+        width: 950px;
+    }
