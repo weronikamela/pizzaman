@@ -32,103 +32,18 @@
     .verticalLine {
       border-left: thick solid #ff0000;
     }
-
-
-    .bodyBackground {
-      content: "";
-      background-color: #D50A0A;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      position: absolute;
-      z-index: -1;
-    }
-
+/*MENU*/
     .myView{
-      background-color: #D50A0A ;
-      padding-top: 25px;
-      }
-
-    .borderRight{
-        border-right: solid 1px #000;
-    }
-
-    .whiteBackground{
-        background-color: white;
-
+        padding-top: 25px;
     }
     body{
         background-color: #D50A0A;
+        padding-bottom: 40px;
     }
-
-/*MENU*/
     .menu{
         width:55%!important;
         margin-right: 40px;
     }
-
-    .cart{
-        width:30%!important;
-    }
-
-    .glyphicon { margin-right:5px; }
-
-    .item.list-group-item
-    {
-        float: none;
-        width: 100%;
-        background-color: #fff;
-    }
-
-    .list-group-image
-    {
-        margin-right: 10px;
-        max-width: 275px;
-        max-height: 250px;
-    }
-     .item.list-group-item{
-        margin-right: 10px;
-     }
-
-    .item.list-group-item .thumbnail
-    {
-        margin-bottom: 0px;
-    }
-
-    .item.list-group-item .caption
-    {
-        padding: 9px 9px 0px 9px;
-    }
-
-    .item.list-group-item:nth-of-type(odd)
-    {
-        background: #eeeeee;
-    }
-
-    .item.list-group-item:before, .item.list-group-item:after
-    {
-        display: table;
-        content: "";
-    }
-
-    .item.list-group-item img
-    {
-        float: left;
-    }
-    .item.list-group-item:after
-    {
-        clear: both;
-    }
-
-    #menuSite .list-group-item  {
-       border: none;
-    }
-
-    .lead{
-        margin-bottom: 0px!improtant;
-    }
-
 /*CHECKOUT FORM*/
     #checkout{
         background-color: #333;
@@ -160,16 +75,6 @@
         background-color: #555;
         color: #eee;
     }
-    #infotable{
-        background-color: white;
-        text-align: right;
-        border-radius: 5px;
-        border:  white;
-    }
-    #infotable thead tr th{
-        width: 100px;
-        text-align: right;
-    }
 
 /*PRODUCTS*/
     #product-container{
@@ -197,7 +102,7 @@
     .product .product-info{
         background-color: #333;
         float: left;
-        width: 600px;
+        width: 300px;
         height: inherit;
         box-sizing: border-box;
         padding-left: 10px;
@@ -220,20 +125,6 @@
         box-sizing: border-box;
         border-top-right-radius: inherit;
         border-bottom-right-radius: inherit;
-    }
-
-/*FOOTER*/
-    footer{
-        display: flex;
-        justify-content: center;
-    }
-
-    footer div{
-        display: flex;
-        justify-content: center;
-        background-color:#333333;
-        padding-top: 8px;
-        padding-bottom: 12px;
-        margin-top: 20px;
-        width: 950px;
+        font-size: 32px;
+        text-decoration: none;
     }
