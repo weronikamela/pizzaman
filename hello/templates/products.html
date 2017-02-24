@@ -1,19 +1,18 @@
 {% block content %}
     {% for pizza in pizza_list %}
-        <div class="item  col-xs-4 col-lg-4 grid-group-item list-group-item">
-            <img class="group list-group-image" src="{{ pizza.url }}" alt=""/>
-            <div class="caption">
-                <h4 class="group inner list-group-item-heading">
-                    {{ pizza.name }}</h4>
-                <p class="group inner list-group-item-text">
-                    {{ pizza.description }}</p>
-                <div class="col-xs-12 col-md-6">
-                    <p class="lead">
-                        {{ pizza.price }} {{ pizza.currency }}</p>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <a class="btn btn-success" href="/checkout/{{ pizza.id }}/">Add to cart</a>
-                </div>
+        <div class="product">
+            <div class="product-image">
+                <img src="{{ pizza.url }}" alt=""/>
+            </div>
+            <div class="product-info">
+                <h4>{{ pizza.name }}</h4>
+                <p>{{ pizza.price }} {{ pizza.currency }}</p>
+                <p>{{ pizza.description }}</p>
+            </div>
+            <div class="product-button">
+                <a class="add-to-cart" href="/checkout/{{ pizza.id }}/">
+                    <span>Order!</span>
+                </a>
             </div>
         </div>
     {% endfor %}

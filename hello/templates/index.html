@@ -15,14 +15,10 @@
 
 <body>
     {% include 'nav.html' %}
-    <div id="menuSite">
-        <div class="container-fluid myView">
-            <div class="container">
-                <div class="menu whiteBackground col-xs-12 col-md-8">
-                    <div class="row list-group" id="products">
-                        {% include 'products.html' %}
-                    </div>
-                </div>
+    <div id="menuSite" class="myView">
+        <div class="container">
+            <div id="product-container" class="col-xs-12 col-md-12">
+                    {% include 'products.html' %}
             </div>
         </div>
     </div>
