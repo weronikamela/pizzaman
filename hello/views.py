@@ -12,7 +12,9 @@ def index(request):
     return render(request, 'index.html', {'pizza_list': Product2.objects.all()})
 
 def thank(request):
-    return render(request, 'thank.html')
+    contextIdx = Order.objects.count() - 1
+    context = Order.objects.all()[contextIdx]
+    return render(request, 'thank.html', {'order' : context})
 
 def products(request):
     return render(request, 'products.html')
@@ -42,7 +44,7 @@ def checkout(request, id):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            return HttpResponseRedirect('/thank.html/')
+            return HttpResponseRedirect('/thank/')
 
     # if a GET (or any other method) we'll create a blank form
     else:
