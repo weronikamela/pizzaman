@@ -14,18 +14,18 @@
     </script>
 </head>
 <body>
-    {% include 'nav.html' %}
-    <div id="menuSite" class="myView">
-        <div class="container">
-            <form  id="checkout" action="/checkout/{{instance.id}}/" method="post">
-                {% csrf_token %}
-                {{form}}
-                <button type="submit" id="checkout-button" class="input-button-medium">Place Order</button>
-            </form>
-        </div>
+{% include 'nav.html' %}
+<div id="menuSite" class="myView">
+    <div class="container">
+        <form  id="checkout" action="/checkout/{{instance.id}}/" method="post">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" id="checkout-button" class="input-button-medium">Place Order</button>
+        </form>
     </div>
-    <script src="../../static/js/jquery-3.1.1.min.js" type="text/javascript"></script>
-    <script src="../../static/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../../static/js/custom.js" type="text/javascript"></script>
+</div>
+<script src="../../static/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="../../static/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../static/js/custom.js" type="text/javascript"></script>
 </body>
 </html>

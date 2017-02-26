@@ -1,53 +1,115 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django import forms
+from django.core import validators
+from django.core.validators import RegexValidator
 
-from .models import Product2
-from .forms import OrderForm
-from hello.models import Order
-
-# Create your views here.
-def index(request):
-    return render(request, 'index.html', {'pizza_list': Product2.objects.all()})
-
-def thank(request):
-    contextIdx = Order.objects.count() - 1
-    context = Order.objects.all()[contextIdx]
-    return render(request, 'thank.html', {'order' : context})
-
-def products(request):
-    return render(request, 'products.html')
-
-def createOrder(form, product):
-    order =  Order(name=form.cleaned_data['customerName'],surname=form.cleaned_data['customerSurname'], postalcode=form.cleaned_data['customerPostalCode'],
-                   city=form.cleaned_data['customerCity'], street=form.cleaned_data['customerStreet'],phone=form.cleaned_data['customerPhone'], email=form.cleaned_data['customerEmail'], product=product)
-    order.save()
-
-def checkout(request, id):
-    # if this is a POST request we need to process the form data
-    instance = get_object_or_404(Product2, id=id)
-    Context = {
-        "id": instance.id,
-        "instance": instance
-    }
-    product = Product2.objects.get(id=id)
-
-
-    if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
-        form = OrderForm(request.POST)
-
-    # check whether it's valid:
-        if form.is_valid():
-            createOrder(form, product)
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
-            return HttpResponseRedirect('/thank/')
-
-    # if a GET (or any other method) we'll create a blank form
-    else:
-        form = OrderForm()
-
-    return render(request, 'checkout.html', {'form': form, 'instance': Context})
+class OrderForm(forms.Form):
+    customerName = forms.CharField(
+        max_length=255,
+        label='Customer name',
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class': 'input-button-medium',
+                'placeholder': 'Name'
+            }
+        ),
+        validators=[RegexValidator(
+            regex='^[a-zA-Z]*$',
+            message='Name must be literal',
+            code='invalid_name'
+        )]
+    )
+    customerSurname = forms.CharField(
+        max_length=255,
+        label='Customer surname',
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class': 'input-button-medium',
+                'placeholder': 'Surname'
+            }
+        ),
+        validators=[RegexValidator(
+            regex='^[a-zA-Z]*$',
+            message='Surname must be literal',
+            code='invalid_surname'
+        )]
+    )
+    customerStreet = forms.CharField(
+        max_length=255,
+        label='Street',
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class': 'input-button-medium',
+                'placeholder': 'Street'
+            }
+        )
+        ,
+        validators=[RegexValidator(
+            regex='^[a-zA-Z]*[0-9]*$|^[a-zA-Z]*[\s][0-9]*[a-zA-Z]*$',
+            message='Street name must be literal',
+            code='invalid_streetName'
+        )]
+    )
+    customerPostalCode = forms.CharField(
+        max_length=32,
+        label='Postal code',
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class': 'input-button-medium',
+                'placeholder': 'PostalCode'
+            }
+        ),
+        validators=[RegexValidator(
+            regex='^[0-9]{2}\-[0-9]{3}$',
+            message='Postal code invalid',
+            code='invalid_postalcode'
+        )]
+    )
+    customerCity = forms.CharField(
+        max_length=80,
+        label='Customer city',
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class': 'input-button-medium',
+                'placeholder': 'City'
+            }
+        ),
+        validators=[RegexValidator(
+            regex='^[a-zA-Z]*$',
+            message='City name must be literal',
+            code='invalid_city'
+        )]
+    )
+    customerEmail = forms.EmailField(
+        max_length=80,
+        label='Email',
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class': 'input-button-medium',
+                'placeholder': 'Email'
+            }
+        ),
+        validators=[validators.EmailValidator],
+    )
+    customerPhone = forms.CharField(
+        max_length=40,
+        label='Phone',
+        required=True,
+        widget=forms.TextInput(
+            attrs={
+                'class': 'input-button-medium',
+                'placeholder': 'Phone'
+            }
+        )
+        ,
+        validators=[RegexValidator(
+            regex='^[0-9]{9}$|^(\d{3}[\s]\d{3}[\s]\d{3})$|^(\d{3}[\-]\d{3}[\-]\d{3})$',
+            message='Invalid number',
+            code='Invalid_number'
+        )]
+    )
