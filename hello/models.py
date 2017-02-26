@@ -15,13 +15,13 @@ class Product2(models.Model):
 
 class Order(models.Model):
     # id          = models.IntegerField(primary_key=True)
-    name        = models.CharField(max_length=32, db_column='cst_name__c')
-    surname     = models.CharField(max_length=32, db_column='cst_surname__c')
-    street      = models.CharField(max_length=32, db_column='cst_street__c')
+    name        = models.CharField(max_length=255, db_column='cst_name__c')
+    surname     = models.CharField(max_length=255, db_column='cst_surname__c')
+    street      = models.CharField(max_length=255, db_column='cst_street__c')
     postalcode  = models.CharField(max_length=32, db_column='cst_postal_code__c')
-    city        = models.CharField(max_length=32, db_column='cst_city__c')
-    email       = models.EmailField(max_length=32, db_column='cst_email__c')
-    phone       = models.CharField(max_length=32, db_column='cst_phone__c')
+    city        = models.CharField(max_length=80, db_column='cst_city__c')
+    email       = models.EmailField(max_length=80, db_column='cst_email__c')
+    phone       = models.CharField(max_length=40, db_column='cst_phone__c')
     product     = models.OneToOneField(Product2, db_column='productid__c')
     class Meta:
         managed = False

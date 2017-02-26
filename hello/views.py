@@ -42,7 +42,10 @@ def checkout(request, id):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            return HttpResponseRedirect('/thank.html/')
+            return HttpResponseRedirect('/thank/')
+        # else
+        #     #przkazujemy forma i errory
+        #     f.['message'].errors
 
     # if a GET (or any other method) we'll create a blank form
     else:
