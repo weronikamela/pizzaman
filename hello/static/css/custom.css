@@ -59,6 +59,15 @@
         border-radius: 15px;
         padding: 10px;
     }
+    #checkout label{
+        display: none;
+    }
+    #checkout .errorlist{
+        color: #D50A0A;
+        list-style-type: none;
+        text-align: center;
+        padding: 0;
+    }
     .input-button-medium{
         width: 250px;
         height: 35px;
@@ -131,7 +140,6 @@
         box-sizing: border-box;
         border-top-right-radius: inherit;
         border-bottom-right-radius: inherit;
-<<<<<<< HEAD
     }
 
 /*FOOTER*/
@@ -165,9 +173,3 @@
         list-style-type: none;
         font-size: 20px;
     }
-
-=======
-        font-size: 32px;
-        text-decoration: none;
-    }
->>>>>>> 8965be597581505574ee70f55e8c3faba9fba1d7
