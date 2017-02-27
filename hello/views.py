@@ -17,7 +17,7 @@ def thank(request):
     return render(request, 'thank.html', {'order' : context})
 
 def products(request):
-    return render(request, 'products.html')
+        return render(request, 'products.html')
 
 def createOrder(form, product):
     order =  Order(name=form.cleaned_data['customerName'],surname=form.cleaned_data['customerSurname'], postalcode=form.cleaned_data['customerPostalCode'],
