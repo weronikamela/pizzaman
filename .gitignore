@@ -5,5 +5,5 @@ staticfiles
 db.sqlite3
 *.iml
 /.idea/
-/db.sqlite3
-/Pica.iml
+/salesforce/build.properties
+/salesforce/retrieveSource/
