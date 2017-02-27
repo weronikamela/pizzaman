@@ -1,0 +1,9 @@
+{!Order__c.cst_name__c},
+
+we are grateful for placing an order.
+
+Your pizza {!Order__c.productID__c} will be delivered to the adress:
+{!Order__c.cst_street__c} {!Order__c.cst_city__c}.
+
+Best regards,
+Pizzerman Team
