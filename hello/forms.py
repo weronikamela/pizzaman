@@ -19,7 +19,7 @@ class OrderForm(forms.Form):
             code='invalid_name'
         )]
     )
-    customerSurname = for
+    customerSurname = forms.CharField(
         max_length=255,
         label='Customer surname',
         required=True,
