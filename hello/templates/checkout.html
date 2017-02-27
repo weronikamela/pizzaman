@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <title>Checkout</title>
 
-    <link rel="stylesheet" href="../../static/css/custom.css"/>
-    <link rel="stylesheet" href="../../static/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../../static/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="../../static/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../../static/css/custom.css"/>
 
+    <script>
+    window.onload = function(){
+        $(".errorlist").next().css({
+            "border": "2px solid #D50A0A",
+            "color": "#D50A0A"
+        });
+    };
+    </script>
     <script type="text/javascript">
         var csrftoken = jquery("[name=csrfmiddlewaretoken]").val();
     </script>

@@ -15,7 +15,7 @@ class OrderForm(forms.Form):
         ),
         validators=[RegexValidator(
             regex='^[a-zA-Z]*$',
-            message='Name must be literal',
+            message='Name must be literal.',
             code='invalid_name'
         )]
     )
@@ -31,7 +31,7 @@ class OrderForm(forms.Form):
         ),
         validators=[RegexValidator(
             regex='^[a-zA-Z]*$',
-            message='Surname must be literal',
+            message='Surname must be literal.',
             code='invalid_surname'
         )]
     )
@@ -48,7 +48,7 @@ class OrderForm(forms.Form):
         ,
         validators=[RegexValidator(
             regex='^[a-zA-Z]*[0-9]*$|^[a-zA-Z]*[\s][0-9]*[a-zA-Z]*$',
-            message='Street name must be literal',
+            message='Street name must be literal.',
             code='invalid_streetName'
         )]
     )
@@ -64,7 +64,7 @@ class OrderForm(forms.Form):
         ),
         validators=[RegexValidator(
             regex='^[0-9]{2}\-[0-9]{3}$',
-            message='Postal code invalid',
+            message='Invalid postal code.',
             code='invalid_postalcode'
         )]
     )
@@ -80,7 +80,7 @@ class OrderForm(forms.Form):
         ),
         validators=[RegexValidator(
             regex='^[a-zA-Z]*$',
-            message='City name must be literal',
+            message='City name must be literal.',
             code='invalid_city'
         )]
     )
@@ -109,7 +109,7 @@ class OrderForm(forms.Form):
         ,
         validators=[RegexValidator(
             regex='^[0-9]{9}$|^(\d{3}[\s]\d{3}[\s]\d{3})$|^(\d{3}[\-]\d{3}[\-]\d{3})$',
-            message='Invalid number',
+            message='Invalid number.',
             code='Invalid_number'
         )]
     )
