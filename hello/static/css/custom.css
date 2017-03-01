@@ -65,7 +65,7 @@ src:url('../fonts/NeoSans.eot?#iefix')
 
 /* Change the link color to #111 (black) on hover */
     .nav-button a:hover{
-        background-color: #111;
+        background-color: #818B99;
         color: white;
     }
     .nav-button a:link{
@@ -129,7 +129,7 @@ src:url('../fonts/NeoSans.eot?#iefix')
  /* TABLE */
 
  .table-hover>tbody>tr:hover{
-     background-color: #FFAE38;
+     background-color: #818B99;
      padding-bottom: 30px;
  }
 
@@ -186,7 +186,7 @@ src:url('../fonts/NeoSans.eot?#iefix')
         border-bottom-right-radius: inherit;
     }
     .product .product-button .add-to-cart:hover{
-        background-color: #555;
+        background-color: #818B99;
     }
 
 /*THANKSITE*/

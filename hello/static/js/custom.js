@@ -6,6 +6,11 @@ $(function() {
     });
 });
 
+$(document).find("#orderHistory"), function(){
+
+
+});
+
 function getCookie(name) {
     var cookieValue = null;
     if (document.cookie && document.cookie !== '') {
