@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
 
 
 from .models import Product2
@@ -14,18 +13,17 @@ def index(request):
 def getAllOrders(request):
     return render(request, 'orderHistory.html', {'orderList': Order.objects.all()})
 
-def thank(request):
-    contextIdx = Order.objects.count() - 1
-    context = Order.objects.all()[contextIdx]
-    return render(request, 'thank.html', {'order' : context})
+def thank(request, order):
+    return render(request, 'thank.html', {'order': order})
 
 def products(request):
-        return render(request, 'products.html')
+    return render(request, 'products.html')
 
 def createOrder(form, product):
     order =  Order(name=form.cleaned_data['customerName'],surname=form.cleaned_data['customerSurname'], postalcode=form.cleaned_data['customerPostalCode'],
                    city=form.cleaned_data['customerCity'], street=form.cleaned_data['customerStreet'],phone=form.cleaned_data['customerPhone'], email=form.cleaned_data['customerEmail'], product=product)
     order.save()
+    return order
 
 def checkout(request, id):
     # if this is a POST request we need to process the form data
@@ -43,11 +41,11 @@ def checkout(request, id):
 
     # check whether it's valid:
         if form.is_valid():
-            createOrder(form, product)
+            order = createOrder(form, product)
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            return HttpResponseRedirect('/thank/')
+            return thank(request, order)
 
     # if a GET (or any other method) we'll create a blank form
     else:
