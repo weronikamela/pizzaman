@@ -1,3 +1,8 @@
+@font-face {
+    font-family: NeoSans;
+    src: url(sansation_light.woff);
+}
+
 @font-face{font-family:'NeoSans';
 src:url('../fonts/NeoSans.eot');
 src:url('../fonts/NeoSans.eot?#iefix')
@@ -218,4 +223,6 @@ src:url('../fonts/NeoSans.eot?#iefix')
         color: white;
         margin-top: 50px;
         font-size: 14px;
+        max-width: 750px;
+        min-width: 450px;
     }
