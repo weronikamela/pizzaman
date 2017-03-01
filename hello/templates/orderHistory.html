@@ -16,7 +16,7 @@
             <tr>
                 <td>{{ order.name }}</td>
                 <td>{{ order.product.name  }}</td>
-                <td>{{ order.createdDate }}</td>
+                <td>{{ order.createdDate|date:'Y-m-d H:i' }}</td>
             </tr>
             {% endfor %}
         </tbody>

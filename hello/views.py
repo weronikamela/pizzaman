@@ -11,7 +11,7 @@ def index(request):
     return render(request, 'index.html', {'pizza_list': Product2.objects.all()})
 
 def getAllOrders(request):
-    order_list = Order.objects.all().order_by('-createdDate')
+    order_list = Order.objects.exclude(createdDate=None).order_by('-createdDate')
     return render(request, 'orderHistory.html', {'orderList': order_list})
 
 def thank(request, order):
@@ -21,7 +21,7 @@ def products(request):
     return render(request, 'products.html')
 
 def createOrder(form, product):
-    order =  Order(name=form.cleaned_data['customerName'],surname=form.cleaned_data['customerSurname'], postalcode=form.cleaned_data['customerPostalCode'],
+    order =  Order(name=form.cleaned_data['customerName'], surname=form.cleaned_data['customerSurname'], postalcode=form.cleaned_data['customerPostalCode'],
                    city=form.cleaned_data['customerCity'], street=form.cleaned_data['customerStreet'],phone=form.cleaned_data['customerPhone'], email=form.cleaned_data['customerEmail'], product=product)
     order.save()
     return order
