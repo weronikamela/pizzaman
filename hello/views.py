@@ -11,7 +11,8 @@ def index(request):
     return render(request, 'index.html', {'pizza_list': Product2.objects.all()})
 
 def getAllOrders(request):
-    return render(request, 'orderHistory.html', {'orderList': Order.objects.all()})
+    order_list = Order.objects.all().order_by('-createdDate')
+    return render(request, 'orderHistory.html', {'orderList': order_list})
 
 def thank(request, order):
     return render(request, 'thank.html', {'order': order})

@@ -1,18 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Order History</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
 
-{% for order in orderList %}
-<div class="product">
-    <div class="product-info">
-        <h4>{{ order.product.name }}</h4>
-        <p>{{ order.name }} {{ order.createdDate }} {{ order.id }}</p>
-    </div>
+<div id="orderHistory">
+    <table class="table table-hover custom ">
+        <thead>
+            <tr>
+                <th>Customer name</th>
+                <th>Ordered pizza</th>
+                <th class="sort">Order date </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orderList %}
+            <tr>
+                <td>{{ order.name }}</td>
+                <td>{{ order.product.name  }}</td>
+                <td>{{ order.createdDate }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
-{% endfor %}
-</body>
-</html>
+{% endblock %}
