@@ -21,12 +21,6 @@
         text-decoration: none;
     }
 
-    label{
-    color: white;
-    padding-top: 20px;
-    margin-bottom: -10px;
-    }
-
 /* Change the link color to #111 (black) on hover */
     .nav-button a:hover{
         background-color: #111;

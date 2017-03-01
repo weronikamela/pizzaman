@@ -11,6 +11,9 @@ from hello.models import Order
 def index(request):
     return render(request, 'index.html', {'pizza_list': Product2.objects.all()})
 
+def getAllOrders(request):
+    return render(request, 'orderHistory.html', {'orderList': Order.objects.all()})
+
 def thank(request):
     contextIdx = Order.objects.count() - 1
     context = Order.objects.all()[contextIdx]

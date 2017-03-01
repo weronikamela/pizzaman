@@ -14,7 +14,7 @@ class Product2(models.Model):
         db_table = '"salesforce"."product2"'
 
 class Order(models.Model):
-    # id          = models.IntegerField(primary_key=True)
+    id          = models.AutoField(primary_key=True)
     name        = models.CharField(max_length=255, db_column='cst_name__c')
     surname     = models.CharField(max_length=255, db_column='cst_surname__c')
     street      = models.CharField(max_length=255, db_column='cst_street__c')
@@ -23,6 +23,8 @@ class Order(models.Model):
     email       = models.EmailField(max_length=80, db_column='cst_email__c')
     phone       = models.CharField(max_length=40, db_column='cst_phone__c')
     product     = models.OneToOneField(Product2, db_column='productid__c')
+    createdDate = models.DateTimeField(db_column='createddate')
+
     class Meta:
         managed = False
         db_table = '"salesforce"."order__c"'
