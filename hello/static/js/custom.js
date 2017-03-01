@@ -6,10 +6,6 @@ $(function() {
     });
 });
 
-$(document).find("#orderHistory"), function(){
-
-
-});
 
 function getCookie(name) {
     var cookieValue = null;
