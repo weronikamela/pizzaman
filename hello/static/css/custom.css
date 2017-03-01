@@ -1,8 +1,50 @@
+@font-face {
+    font-family: NeoSans;
+    src: url(sansation_light.woff);
+}
+
+@font-face{font-family:'NeoSans';
+src:url('../fonts/NeoSans.eot');
+src:url('../fonts/NeoSans.eot?#iefix')
+ format('embedded-opentype'),
+ url('../fonts/NeoSans.woff')
+ format('woff'),url('../fonts/NeoSans.ttf')
+ format('truetype'),
+ url('../fonts/NeoSans.svg#svgFontName')
+ format('svg')}
+
+ @font-face{font-family:'NeoSansMedium';
+ src:url('../fonts/NeoSansMedium.eot');
+ src:url('../fonts/NeoSansMedium.eot?#iefix')
+ format('embedded-opentype'),
+ url('../fonts/NeoSansMedium.woff')
+ format('woff'),
+ url('../fonts/NeoSansMedium.ttf')
+ format('truetype'),
+ url('../fonts/NeoSansMedium.svg#svgFontName')
+ format('svg')}
+
+ @font-face{font-family:'NeoSansBold';
+ src:url('../fonts/NeoSansBold.eot');
+ src:url('../fonts/NeoSansBold.eot?#iefix')
+ format('embedded-opentype'),url('../fonts/NeoSansBold.woff')
+ format('woff'),url('../fonts/NeoSansBold.ttf')
+ format('truetype'),
+ url('../fonts/NeoSansBold.svg#svgFontName')
+ format('svg')}
+
+
+    html, body{
+        font-family:NeoSans, Helvetica, sans-serif;
+        letter-spacing:.1em;
+    }
+
+
 /*NAV BAR*/
     nav {
         width: 100%;
         height: 52px;
-        background-color: #333;
+        background-color: #5a5a5a;
     }
     #navbar{
         list-style-type: none;
@@ -32,12 +74,12 @@
     .verticalLine {
       border-left: thick solid #ff0000;
     }
-/*MENU*/
+/*MAIN*/
     .myView{
         padding-top: 25px;
     }
     body{
-        background-color: #D50A0A;
+        background-color: #FFAE38;
         padding-bottom: 40px;
     }
     .menu{
@@ -46,11 +88,11 @@
     }
 /*CHECKOUT FORM*/
     #checkout{
-        background-color: #333;
+        background-color: #5a5a5a;
         width: 290px;
         margin: 0 auto;
         box-sizing: border-box;
-        border-radius: 15px;
+        border-radius: 8px;
         padding: 10px;
     }
     #checkout label{
@@ -84,6 +126,12 @@
         background-color: #555;
         color: #eee;
     }
+ /* TABLE */
+
+ .table-hover>tbody>tr:hover{
+     background-color: #FFAE38;
+     padding-bottom: 30px;
+ }
 
 /*PRODUCTS*/
     #product-container{
@@ -95,7 +143,7 @@
         height: 150px;
         box-sizing: border-box;
         margin: 15px auto 0 auto;;
-        border-radius: 25px;
+        border-radius: 8px;
     }
     .product .product-image{
         float: left;
@@ -109,7 +157,7 @@
         border-bottom-left-radius: inherit;
     }
     .product .product-info{
-        background-color: #333;
+        background-color: #5a5a5a;
         float: left;
         min-width: 400px;
         height: inherit;
@@ -140,21 +188,6 @@
     .product .product-button .add-to-cart:hover{
         background-color: #555;
     }
-/*FOOTER*/
-    footer{
-        display: flex;
-        justify-content: center;
-    }
-
-    footer div{
-        display: flex;
-        justify-content: center;
-        background-color: #333;
-        padding-top: 8px;
-        padding-bottom: 12px;
-        margin-top: 20px;
-        width: 950px;
-    }
 
 /*THANKSITE*/
     .block{
@@ -167,7 +200,27 @@
         padding: 50px;
         background-color: #333;
         margin-top: 15%;
-        border-radius: 25px;
+        border-radius: 8px;
         list-style-type: none;
         font-size: 20px;
+    }
+
+
+/*ORDERHISTORY*/
+
+#orderHistory .table>tbody>tr>td{
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+ #orderHistory{
+        background-color: #5a5a5a;
+        width: 55%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        border-radius: 8px;
+        padding: 40px 60px 20px 60px;
+        color: white;
+        margin-top: 50px;
+        font-size: 14px;
     }
