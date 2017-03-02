@@ -9,6 +9,17 @@
             <type>email</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>unfiled$public/Confirmation</template>
+        <template>unfiled$public/Confirm</template>
+    </alerts>
+    <alerts>
+        <fullName>Shipped</fullName>
+        <description>Shipped</description>
+        <protected>false</protected>
+        <recipients>
+            <field>cst_email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Shipping</template>
     </alerts>
 </Workflow>

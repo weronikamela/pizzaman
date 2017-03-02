@@ -2,8 +2,8 @@
 <EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
     <available>true</available>
     <encodingKey>ISO-8859-1</encodingKey>
-    <name>Confirmation</name>
+    <name>Confirm</name>
     <style>none</style>
     <subject>Confirmation</subject>
-    <type>text</type>
+    <type>custom</type>
 </EmailTemplate>
