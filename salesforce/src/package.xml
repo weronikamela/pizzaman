@@ -11,11 +11,21 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>unfiled$public/Confirmation</members>
+        <members>*</members>
+        <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>unfiled$public/Confirm</members>
+        <members>unfiled$public/Shipping</members>
         <name>EmailTemplate</name>
     </types>
     <types>
         <members>Confirmation-1</members>
+        <members>Status-1</members>
         <name>Flow</name>
     </types>
     <types>

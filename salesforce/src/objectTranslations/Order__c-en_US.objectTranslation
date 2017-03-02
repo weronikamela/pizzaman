@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Heroku Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Heroku Orders</value>
+    </caseValues>
+    <fields>
+        <label><!-- City --></label>
+        <name>cst_city__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>cst_email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>cst_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>cst_phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postal code --></label>
+        <name>cst_postal_code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>cst_street__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surname --></label>
+        <name>cst_surname__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pizza --></label>
+        <name>productID__c</name>
+        <relationshipLabel><!-- Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>status__c</name>
+        <picklistValues>
+            <masterLabel>In progress</masterLabel>
+            <translation><!-- In progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shipped</masterLabel>
+            <translation><!-- Shipped --></translation>
+        </picklistValues>
+    </fields>
+    <nameFieldLabel>Heroku Order Number</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
