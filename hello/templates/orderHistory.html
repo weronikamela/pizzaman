@@ -9,6 +9,7 @@
                 <th>Customer name</th>
                 <th>Ordered pizza</th>
                 <th class="sort">Order date </th>
+                <th class="sort">Order status </th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +18,7 @@
                 <td>{{ order.name }}</td>
                 <td>{{ order.product.name  }}</td>
                 <td>{{ order.createdDate|date:'Y-m-d H:i' }}</td>
+                <td>{{ order.status }}</td>
             </tr>
             {% endfor %}
         </tbody>
