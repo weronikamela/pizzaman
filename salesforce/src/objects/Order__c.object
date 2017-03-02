@@ -154,7 +154,7 @@
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
-    <label>Order</label>
+    <label>Heroku Order</label>
     <listViews>
         <fullName>All</fullName>
         <filterScope>Everything</filterScope>
@@ -165,7 +165,7 @@
         <label>Order Name</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Order</pluralLabel>
+    <pluralLabel>Heroku Orders</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

@@ -11,6 +11,14 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>*</members>
+        <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
         <members>unfiled$public/Confirm</members>
         <members>unfiled$public/Shipping</members>
         <name>EmailTemplate</name>
