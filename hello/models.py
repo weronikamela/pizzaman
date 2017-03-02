@@ -24,6 +24,7 @@ class Order(models.Model):
     phone       = models.CharField(max_length=40, db_column='cst_phone__c')
     product     = models.OneToOneField(Product2, db_column='productid__c')
     createdDate = models.DateTimeField(db_column='createddate')
+    status      = models.CharField(max_length=32, db_column='status__c')
 
     class Meta:
         managed = False
