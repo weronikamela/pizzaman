@@ -1,4 +1,4 @@
-list <product2> pizzaList = new list<product2>();
+list<product2> pizzaList = new list<product2>();
 
 pizzaList.add(
     new product2(
@@ -55,4 +55,4 @@ pizzaList.add(
     )
 );
 
-import pizzaList;
+insert pizzaList;
