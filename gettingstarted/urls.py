@@ -5,6 +5,8 @@ admin.autodiscover()
 
 import hello.views
 
+#URLconfiguration
+#url(tarting with a URL requested by the user/browser, used method,  name of url pattern)
 urlpatterns = [
     url(r'^$', hello.views.index, name='index'),
     url(r'^orderHistory', hello.views.getAllOrders, name='orderHistory'),

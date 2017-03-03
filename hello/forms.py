@@ -2,6 +2,11 @@ from django import forms
 from django.core import validators
 from django.core.validators import RegexValidator
 
+#Create custom model of form here with given attributes:
+#max length
+#label
+#widget(adding attributes to html tags on form)
+#validators(responsible for form validations)
 class OrderForm(forms.Form):
     customerName = forms.CharField(
         max_length=255,
