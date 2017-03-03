@@ -10,6 +10,7 @@ from hello.models import Order
 def index(request):
     return render(request, 'index.html', {'pizza_list': Product2.objects.all()})
 
+#function getting list of order excluding ones without date, sortedy by date
 def getAllOrders(request):
     order_list = Order.objects.exclude(createdDate=None).order_by('-createdDate')
     return render(request, 'orderHistory.html', {'orderList': order_list})
@@ -20,9 +21,18 @@ def thank(request, order):
 def products(request):
     return render(request, 'products.html')
 
+
+#method which pulls out user input data from form. Then object is saved in the postgres database and returned by method
 def createOrder(form, product):
-    order =  Order(name=form.cleaned_data['customerName'], surname=form.cleaned_data['customerSurname'], postalcode=form.cleaned_data['customerPostalCode'],
-                   city=form.cleaned_data['customerCity'], street=form.cleaned_data['customerStreet'], phone=form.cleaned_data['customerPhone'], email=form.cleaned_data['customerEmail'], product=product)
+    order = Order(
+        name=form.cleaned_data['customerName'],
+        surname=form.cleaned_data['customerSurname'],
+        postalcode=form.cleaned_data['customerPostalCode'],
+        city=form.cleaned_data['customerCity'],
+        street=form.cleaned_data['customerStreet'],
+        phone=form.cleaned_data['customerPhone'],
+        email=form.cleaned_data['customerEmail'],
+        product=product)
     order.save()
     return order
 
