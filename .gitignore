@@ -3,6 +3,7 @@ venv
 staticfiles
 .env
 db.sqlite3
-/python-getting-started.iml
+*.iml
 /.idea/
-/db.sqlite3
+/salesforce/build.properties
+/salesforce/retrieveSource/

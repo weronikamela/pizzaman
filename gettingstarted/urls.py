@@ -5,14 +5,11 @@ admin.autodiscover()
 
 import hello.views
 
-# Examples:
-# url(r'^$', 'gettingstarted.views.home', name='home'),
-# url(r'^blog/', include('blog.urls')),
-
+#URLconfiguration
+#url(tarting with a URL requested by the user/browser, used method,  name of url pattern)
 urlpatterns = [
     url(r'^$', hello.views.index, name='index'),
-    url(r'^products', hello.views.products, name='products'),
-    #url(r'^checkout', hello.views.checkout, name='checkout'),
+    url(r'^orderHistory', hello.views.getAllOrders, name='orderHistory'),
     url(r'^checkout/(?P<id>\d+)/$', hello.views.checkout, name='checkout'),
     url(r'^admin/', include(admin.site.urls)),
 ]

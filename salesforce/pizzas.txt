@@ -1,0 +1,58 @@
+list<product2> pizzaList = new list<product2>();
+
+pizzaList.add(
+    new product2(
+        Name = 'Capricciosa',
+        Description__c = 'Prepared with mozzarella cheese, Italian baked ham, mushroom, artichoke and tomato.',
+        Price__c = 6,
+        Currency__c = 'USD',
+        displayURL = 'http://italiaansehapjes.com/wp-content/uploads/2015/11/Pizza-Salami.jpg'
+    )
+);
+pizzaList.add(
+    new product2(
+        Name = 'Frutti di Mare',
+        Description__c = 'Prepared with shrimps, clams, tuna and mussels.',
+        Price__c = 10,
+        Currency__c = 'USD',
+        displayURL = 'http://italiaansehapjes.com/wp-content/uploads/2015/11/Pizza-Salami.jpg'
+    )
+);
+pizzaList.add(
+    new product2(
+        Name = 'Margharita',
+        Description__c = 'Prepared with tomato sauce and mozzarella',
+        Price__c = 6,
+        Currency__c = 'USD',
+        displayURL = 'http://italiaansehapjes.com/wp-content/uploads/2015/11/Pizza-Salami.jpg'
+    )
+);
+pizzaList.add(
+    new product2(
+        Name = 'Peperoni',
+        Description__c = 'Prepared with tomato sauce, mozzarella and peperoni',
+        Price__c = 6,
+        Currency__c = 'USD',
+        displayURL = 'http://italiaansehapjes.com/wp-content/uploads/2015/11/Pizza-Salami.jpg'
+    )
+);
+pizzaList.add(
+    new product2(
+        Name = 'Hawaii',
+        Description__c = 'Prepared with tomato sauce, mozzarella, ham and pineapple',
+        Price__c = 6,
+        Currency__c = 'USD',
+        displayURL = 'http://italiaansehapjes.com/wp-content/uploads/2015/11/Pizza-Salami.jpg'
+    )
+);
+pizzaList.add(
+    new product2(
+        Name = 'Rucola',
+        Description__c = 'Prepared with  tomato sauce, mozzarella di bufala, parma ham, Parmesan shavings and rucola',
+        Price__c = 6,
+        Currency__c = 'USD',
+        displayURL = 'http://italiaansehapjes.com/wp-content/uploads/2015/11/Pizza-Salami.jpg'
+    )
+);
+
+insert pizzaList;
