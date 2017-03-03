@@ -11,11 +11,11 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Order__c-en_US</members>
         <name>CustomObjectTranslation</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Order__c</members>
         <name>CustomTab</name>
     </types>
     <types>
@@ -27,6 +27,11 @@
         <members>Confirmation-1</members>
         <members>Status-1</members>
         <name>Flow</name>
+    </types>
+    <types>
+        <members>Order__c-Order Layout</members>
+        <members>Product2-Product Layout</members>
+        <name>Layout</name>
     </types>
     <types>
         <members>Admin</members>

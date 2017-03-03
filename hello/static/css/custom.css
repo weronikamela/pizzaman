@@ -154,7 +154,7 @@ src:url('../fonts/NeoSans.eot?#iefix')
     .product .product-info{
         background-color: #5a5a5a;
         float: left;
-        min-width: 400px;
+        width: 400px;
         height: inherit;
         box-sizing: border-box;
         padding-left: 10px;
