@@ -1,3 +1,5 @@
+delete [SELECT id FROM product2];
+
 list<product2> pizzaList = new list<product2>();
 
 pizzaList.add(
